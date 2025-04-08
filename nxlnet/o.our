@@ -1,0 +1,50 @@
+start slurm job
+--- node info
+node: hostname
+cuda drivers: which nvcc
+GPU info:
+Thu Apr  3 21:29:36 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:06:00.0 Off |                  Off |
+| 30%   38C    P8             18W /  230W |       2MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: True
+Device name: NVIDIA RTX A5000
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+Epoch 5
+Epoch 6
+Epoch 7
+Epoch 8
+Epoch 9
+Epoch 10
+Epoch 11
+Epoch 12
+Epoch 13
+Epoch 14
+Epoch 15
+Epoch 16
+Epoch 17
+Epoch 18
+Epoch 19
+Epoch 20
+Validation Results: {'accuracy': 0.6959940097341819, 'precision': 0.7247222560659795, 'recall': 0.6959940097341819, 'f1': 0.7055368620167558}
+Test Results: {'accuracy': 0.7087763965852928, 'precision': 0.7370644929504184, 'recall': 0.7087763965852928, 'f1': 0.7179759771246382}
+Slurm run finished
