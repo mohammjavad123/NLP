@@ -1,0 +1,55 @@
+start slurm job
+--- node info
+node: hostname
+cuda drivers: which nvcc
+GPU info:
+Tue Apr  8 08:45:03 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               Off |   00000000:06:00.0 Off |                  Off |
+| 30%   33C    P8             16W /  300W |       2MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+🌍 Epoch 1
+Avg train loss: 0.8159607234014947
+Validation F1: 0.6873
+
+🌍 Epoch 2
+Avg train loss: 0.6860395343935486
+Validation F1: 0.7293
+
+🌍 Epoch 3
+Avg train loss: 0.5692007813393762
+Validation F1: 0.7455
+
+🌍 Epoch 4
+Avg train loss: 0.45723627025875585
+Validation F1: 0.7500
+
+🌍 Epoch 5
+Avg train loss: 0.38417152801017423
+Validation F1: 0.7500
+
+🌍 Epoch 6
+Avg train loss: 0.38353625878680514
+Validation F1: 0.7500
+⏹️ Early stopping triggered.
+
+✅ Final Validation: {'accuracy': 0.7489704230625234, 'precision': 0.7510582564581336, 'recall': 0.7489704230625234, 'f1': 0.7499642417151955}
+✅ Final Test: {'accuracy': 0.7525834955818481, 'precision': 0.7539301652470828, 'recall': 0.7525834955818481, 'f1': 0.7531840361025233}
+Slurm run finished
