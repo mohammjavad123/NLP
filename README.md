@@ -1,99 +1,65 @@
-# Semantic Analysis on Tech Product Reviews
+# 📊 Semantic Sentiment Analysis & Topic Modeling
 
+This repository contains the full implementation, experiments, and results of our NLP project focused on **multi-class sentiment classification** and **topic modeling** on technology product reviews.
 
-This repository contains the full implementation, code, data (where permitted), and LaTeX report for our NLP course project: **Sentiment and Semantic Analysis of Technology Product Reviews**, with a special focus on Apple and Samsung.
-The full report is in NLP_project.pdf with all details
-## 🔍 Project Overview
+We explore a wide spectrum of models:
+- ✅ Classical Machine Learning (Logistic Regression, Decision Trees)
+- ✅ Deep Learning Models (LSTM, GRU, BiLSTM + Attention)
+- ✅ Transformers (RoBERTa, XLNet, DeBERTa, CardiffNLP)
+- ✅ Topic Modeling (LDA, LSA, NMF, BERTopic)
+- ✅ FastText Baseline
 
-We performed multi-class sentiment classification (positive, neutral, negative) on real-world product reviews from the Amazon 5-core Electronics dataset. Our work includes:
+## 📁 Project Structure
 
-- Preprocessing and cleaning ~17,000 reviews
-- Fine-tuning transformer models (e.g., RoBERTa, XLNet, DeBERTa)
-- Deep learning with RNN variants (LSTM, GRU, BiLSTM + Attention)
-- FastText baseline
-- Classical ML models
-- Topic modeling with LDA, LSA, NMF, and BERTopic
-
-We also compared our current work with a previous sentiment analysis task we conducted on manually labeled Reddit comments related to the 2024 U.S. Election.
-
-## 📁 Directory Structure
-
-```
-├── notebooks/
-│   ├── transformers/
+```bash
+├── models/              # All sentiment classification models
+│   ├── transformer/
 │   ├── deep_learning/
-│   ├── classical_ml/
-│   ├── topic_modeling/
-├── data/
-│   ├── semantic_tech_real.csv
-│   ├── semantic_tech_10k.csv
-│   └── reddit_us_election.csv
-├── models/
-│   ├── saved_transformer_checkpoints/
-│   ├── fasttext.bin
-├── report/
-│   ├── NLP_project.pdf
-│   └── presentation_slides/
-├── logs/
-│   └── cluster_logs/
-├── README.md
-└── requirements.txt
+│   ├── fasttext/
+│   └── classical_ml/
+├── topic_modeling/      # LDA, NMF, LSA, BERTopic scripts and results
+├── data/                # Processed and labeled datasets
+├── utils/               # Helper functions and preprocessing code
+├── NLP_project.pdf      # 📄 **Final report describing all methods and findings**
+├── requirements.txt     # Python dependencies
+└── README.md            # You're here
 ```
 
-## 📊 Results
+## 🚀 Highlights
 
-### 📈 Transformer Performance (Tech Dataset)
+- Stratified 5-fold cross-validation across all models
+- Robust handling of **class imbalance** using **focal loss**
+- Topic modeling insights revealing brand-specific concerns
+- Experimented with two datasets:
+  - Custom Reddit-based dataset (U.S. Election 2024)
+  - Real-world Amazon product reviews (Apple, Samsung, Lenovo)
 
-| Model              | Accuracy | F1-score |
-|-------------------|----------|----------|
-| CardiffNLP        | 75.98%   | 75.46%   |
-| DeBERTa-v3-large  | 75.26%   | 75.32%   |
-| RoBERTa           | 72.60%   | 72.23%   |
+---
 
-### 🔁 Deep Learning
+## 📌 **Report**
 
-| Model                        | Accuracy | F1-score |
-|-----------------------------|----------|----------|
-| BiLSTM + Attention + GloVe  | 70.00%   | 66.00%   |
-| GRU + GloVe                 | 70.84%   | 70.99%   |
+📎 **You can find the full project report with all experiments, results, and explanations in [`NLP_project.pdf`](./NLP_project.pdf).**
 
-### ⚡ FastText Baseline
+---
 
-- Accuracy: 66.15%
-- Macro F1: 62.63%
+## 📦 Installation
 
-### 📚 Topic Modeling (Example from LDA)
+```bash
+pip install -r requirements.txt
+```
 
-| Topic | Top Keywords |
-|-------|--------------|
-| 1     | cable, usb, adapter, sound, iphone |
-| 2     | laptop, lenovo, windows, mouse, computer |
-| ...   | ... |
+or for BERTopic:
 
-## 🧠 Tools & Libraries
+```bash
+pip install bertopic
+```
 
-- HuggingFace Transformers
-- TensorFlow & Keras
-- Scikit-learn
-- FastText (Facebook AI)
-- NLTK & Gensim
-- BERTopic, SVD, NMF
-- Google Colab & University HPC Cluster
+---
 
-## 🛠️ Reproducibility
+## 📬 Contact
 
-- All notebooks are modular and self-contained.
-- Pretrained models and log files are provided where possible.
-- Run `requirements.txt` to install dependencies.
-- Check `report/NLP_project.pdf` for methodology and results.
+Made with ❤️ by:
+- **Mohammadkazem Rajabi**  
+- **Baharehsadat Khatami**
 
-## 👥 Authors
-
-- **Mohammadkazem Rajabi** – [Email](mailto:Mohammadkazem.rajabi@unipd.studenti.it)
-- **Baharehsadat Khatami** – [Email](mailto:Baharehsadat.khatami@unipd.studenti.it)
-
-Special thanks to **Amir Sadeghi** for contributing to the annotation of the Reddit dataset.
-
-## 📄 License
-
-This repository is for academic and research purposes only. If you use this project, please cite our report and acknowledge our work.
+---
