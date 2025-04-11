@@ -1,7 +1,8 @@
 # Semantic Analysis on Tech Product Reviews
 
-This repository contains the full implementation, code, data (where permitted), and LaTeX report for our NLP course project: **Sentiment and Semantic Analysis of Technology Product Reviews**, with a special focus on Apple and Samsung.
 
+This repository contains the full implementation, code, data (where permitted), and LaTeX report for our NLP course project: **Sentiment and Semantic Analysis of Technology Product Reviews**, with a special focus on Apple and Samsung.
+The full report is in NLP_project.pdf with all details
 ## 🔍 Project Overview
 
 We performed multi-class sentiment classification (positive, neutral, negative) on real-world product reviews from the Amazon 5-core Electronics dataset. Our work includes:
