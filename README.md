@@ -38,7 +38,7 @@ We explore a wide spectrum of models:
 
 ## 📌 **Report**
 
-📎 **You can find the full project report with all experiments, results, and explanations in [`NLP_project.pdf`](./NLP_project.pdf).**
+📎 **You can find the full project report with all experiments, results, and explanations in [`NLP_project.pdf`](./NLP_project(1).pdf).**
 
 ---
 
